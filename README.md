@@ -2,6 +2,8 @@
 
 A BackIssue source plugin that searches installed remote extensions in [Suwayomi](https://github.com/Suwayomi/Suwayomi-Server) (via its GraphQL and REST APIs), queues and downloads matching comic issues, transfers the resulting `.cbz` archives into BackIssue, and optionally deletes the local chapter copies from Suwayomi afterward.
 
+> **Tested with:** Suwayomi Server `v2.4.2366` (`ghcr.io/suwayomi/suwayomi-server:latest`)
+
 ---
 
 ## Features
@@ -37,8 +39,8 @@ The plugin consists of a Node.js backend (`index.js`), a client-side settings UI
 
 ## Prerequisites: Suwayomi Server, FlareSolverr & Extensions
 
-### 1. Required Suwayomi Docker Image
-You **must** use the official `ghcr.io/suwayomi/suwayomi-server:latest` Docker image (older or third-party builds may lack the required GraphQL mutations, REST endpoints, or built-in WebView support needed for Cloudflare-protected sources).
+### 1. Required Suwayomi Docker Image & Tested Version
+You **must** use the official `ghcr.io/suwayomi/suwayomi-server:latest` Docker image (tested with **Server version `v2.4.2366`**). Older or third-party builds may lack the required GraphQL mutations, REST endpoints, or built-in WebView support needed for Cloudflare-protected sources.
 
 ### 2. Configure FlareSolverr in Suwayomi
 Many comic extensions (including **BatCave** and others) sit behind Cloudflare protection. Configure FlareSolverr in Suwayomi so automated searches and downloads do not get blocked:
