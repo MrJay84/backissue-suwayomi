@@ -1,0 +1,7 @@
+{
+  "name": "backissue-suwayomi",
+  "version": "0.3.0",
+  "description": "Download matched Suwayomi chapters into BackIssue",
+  "type": "module",
+  "private": true
+}
